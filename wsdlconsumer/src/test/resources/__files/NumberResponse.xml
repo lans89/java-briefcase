@@ -1,0 +1,7 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Body>
+        <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">
+            <m:NumberToWordsResult>five thousand</m:NumberToWordsResult>
+        </m:NumberToWordsResponse>
+    </soap:Body>
+</soap:Envelope>

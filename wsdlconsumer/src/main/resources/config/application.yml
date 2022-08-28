@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+soap-service:
+  country:
+    packages: com.example.country.client.gen
+    endpoint: http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL
+  number:
+    packages: com.example.number.client.gen
+    endpoint: https://www.dataaccess.com/webservicesserver/numberconversion.wso?WSDL
+
+spring:
+  main:
+    banner-mode: off
+
+logging:
+  pattern:
+    file: "%d %-5level [%thread] %logger : %msg%n"
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    root: "info"
+    org.springframework.web: "debug"
+  file:
+    name: "C:\\logs\\wsdlConsumer.log"
+

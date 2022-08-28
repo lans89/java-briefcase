@@ -1,0 +1,21 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Body>
+        <m:FullCountryInfoResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo">
+            <m:FullCountryInfoResult>
+                <m:sISOCode>HN</m:sISOCode>
+                <m:sName>Honduras</m:sName>
+                <m:sCapitalCity>Tegucigalpa</m:sCapitalCity>
+                <m:sPhoneCode>504</m:sPhoneCode>
+                <m:sContinentCode>AM</m:sContinentCode>
+                <m:sCurrencyISOCode>HNL</m:sCurrencyISOCode>
+                <m:sCountryFlag>http://www.oorsprong.org/WebSamples.CountryInfo/Flags/Honduras.jpg</m:sCountryFlag>
+                <m:Languages>
+                    <m:tLanguage>
+                        <m:sISOCode>es</m:sISOCode>
+                        <m:sName>Spanish</m:sName>
+                    </m:tLanguage>
+                </m:Languages>
+            </m:FullCountryInfoResult>
+        </m:FullCountryInfoResponse>
+    </soap:Body>
+</soap:Envelope>
