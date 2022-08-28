@@ -1,0 +1,20 @@
+{
+  "webReport":
+  {
+    "name": "...",
+    "params": [
+      "param1", "param2","param3"
+    ]
+  },
+  "fileInfo": {
+    "name": "...",
+    "description": "...",
+    "file": "...base64"
+  },
+  "metadata": {
+    "category": "...",
+    "attributes":[
+      "attribute1", "attribute2", "attribute3"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+api-services:
+  mapping-service:
+    bored:
+      host: http://localhost:8090
+      services-map:
+        random: /api/activity/
+        price: /api/activity?price={0}
+        participant: /api/activity?participants={0}
+        type: /api/activity?type={0}
+
+spring:
+  main:
+    banner-mode: off
+
+logging:
+  level:
+    root: "info"
+    org.springframework.web: "debug"

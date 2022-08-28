@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+api-services:
+  mapping-service:
+    bored:
+      host: http://www.boredapi.com
+      services-map:
+        random: /api/activity/
+        price: /api/activity?price={0}
+        participant: /api/activity?participants={0}
+        type: /api/activity?type={0}
+
+spring:
+  main:
+    banner-mode: off
+
+logging:
+  pattern:
+    file: "%d %-5level [%thread] %logger : %msg%n"
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    root: "info"
+    org.springframework.web: "debug"
+  file:
+    name: "C:\\logs\\apiConsumer.log"
