@@ -1,0 +1,40 @@
+HELP.md
+target/
+mvnw
+mvnw.cmd
+.mvn
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Generated Java Classes by SOAP ###
+wsdlconsumer/src/main/java/com/example/country/client/
+wsdlconsumer/src/main/java/com/example/number/client/
+META-INF
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
