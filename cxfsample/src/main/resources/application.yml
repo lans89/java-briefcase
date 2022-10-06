@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  main:
+    banner-mode: console
+  jpa:
+    show-sql: true
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:4001/dbtest
+    username: jargueta
+    password: xmlLans89
+    driverClassName: org.postgresql.Driver
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    root: "info"
+    org.springframework.web: "debug"
+    org.springframework.orm: "debug"
