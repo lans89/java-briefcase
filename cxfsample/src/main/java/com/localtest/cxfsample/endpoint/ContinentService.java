@@ -1,6 +1,7 @@
 package com.localtest.cxfsample.endpoint;
 
 import com.localtest.cxfsample.model.Continent;
+import com.localtest.cxfsample.model.Country;
 
 import javax.jws.WebMethod;
 import javax.jws.WebResult;
@@ -11,5 +12,13 @@ import java.util.List;
 public interface ContinentService {
     @WebMethod
     @WebResult(name = "listContinents")
-    List<Continent> listAll();
+    List<Continent> listAllContinent();
+
+    @WebMethod
+    @WebResult(name = "listCountries")
+    List<Country> listAllCountry();
+
+    @WebMethod
+    @WebResult(name = "listCountriesByContinentId")
+    List<Country> listAllCountryByContinentId(Integer idContinent);
 }
