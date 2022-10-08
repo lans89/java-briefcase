@@ -2,11 +2,13 @@ package com.localtest.cxfsample.configuration;
 
 import com.localtest.cxfsample.endpoint.Baeldung;
 import com.localtest.cxfsample.endpoint.ContinentService;
+import com.localtest.cxfsample.endpoint.ISONaming;
 import com.localtest.cxfsample.interceptors.AppInboundInterceptor;
 import com.localtest.cxfsample.interceptors.AppOutboundInterceptor;
 
 import com.localtest.cxfsample.service.BaeldungImpl;
 import com.localtest.cxfsample.service.ContinentServiceImpl;
+import com.localtest.cxfsample.service.ISONamingImpl;
 import org.apache.cxf.Bus;
 import org.apache.cxf.bus.spring.SpringBus;
 import org.apache.cxf.ext.logging.LoggingFeature;
@@ -44,6 +46,11 @@ public class ServiceConfiguration {
         return new ContinentServiceImpl();
     }
 
+    @Bean
+    public ISONaming serviceISONaming(){
+        return new ISONamingImpl();
+    }
+
 
     @Bean
     public Endpoint endpointGreeting() {
@@ -58,6 +65,14 @@ public class ServiceConfiguration {
         EndpointImpl endpoint = new EndpointImpl(springBus(), serviceContinent());
         endpoint.getFeatures().add(new LoggingFeature());
         endpoint.publish("/ContinentService");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint endpointISONaming() {
+        EndpointImpl endpoint = new EndpointImpl(springBus(), serviceISONaming());
+        endpoint.getFeatures().add(new LoggingFeature());
+        endpoint.publish("/ISONamingService");
         return endpoint;
     }
 
