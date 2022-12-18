@@ -1,0 +1,25 @@
+server:
+  port: 9999
+
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    root: "info"
+    org.springframework.web: "debug"
+    hn.iargueta.zuulgateway: "debug"
+
+zuul:
+  routes:
+    bored:
+      path: /test/bored/**
+      url: https://www.boredapi.com/api/
+    ws-country:
+      path: /CountryInfoService.wso
+      url: http://webservices.oorsprong.org/websamples.countryinfo/
+    ws-calc:
+      path: /calculator.asmx
+      url: http://www.dneonline.com/
+    ws-temp:
+      path: /xml/tempconvert.asmx
+      url: https://www.w3schools.com/
