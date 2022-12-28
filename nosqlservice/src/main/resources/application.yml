@@ -1,0 +1,9 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /traffic-monitor
+spring:
+  data:
+    mongodb:
+      uri: mongodb://jhargueta:xmlLans89@localhost:27017
+      database: Apigateway

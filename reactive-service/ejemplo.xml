@@ -1,0 +1,21 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <m:FullCountryInfoResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo">
+         <m:FullCountryInfoResult>
+            <m:sISOCode>CA</m:sISOCode>
+            <m:sName>Canada</m:sName>
+            <m:sCapitalCity>Ottawa</m:sCapitalCity>
+            <m:sPhoneCode>1</m:sPhoneCode>
+            <m:sContinentCode>AM</m:sContinentCode>
+            <m:sCurrencyISOCode>CAD</m:sCurrencyISOCode>
+            <m:sCountryFlag>http://www.oorsprong.org/WebSamples.CountryInfo/Flags/Canada.jpg</m:sCountryFlag>
+            <m:Languages>
+               <m:tLanguage>
+                  <m:sISOCode>eng</m:sISOCode>
+                  <m:sName>English</m:sName>
+               </m:tLanguage>
+            </m:Languages>
+         </m:FullCountryInfoResult>
+      </m:FullCountryInfoResponse>
+   </soap:Body>
+</soap:Envelope>

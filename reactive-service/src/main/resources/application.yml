@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  webflux:
+    base-path: /reactive
+  datasource:
+    mssql:
+      url: jdbc:sqlserver://localhost:1433;databaseName=master;TrustServerCertificate=True
+      username: usertest
+      password: xmlLans89
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      maximum-pool-size: 10
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    root: "info"
+    com.localpany.reactiveservice: "info"
+    org.springframework.web.reactive: "info"
+
+app:
+  wsdl:
+      location: http://webservices.oorsprong.org
+      uri: /websamples.countryinfo/CountryInfoService.wso?wsdl
+      timeout-connect: 1000
+      timeout-read: 1000
+      timeout-write: 1000
